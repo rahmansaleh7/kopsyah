@@ -9,8 +9,13 @@
       
       <field name="arch" type="xml">
         <tree string="Tabungan Amanah">
-        <field name="name"/>
-        <field name="description"/>
+          <field name="name"/>
+          <field name="parent_id" />
+          <!-- <field name="nama_anggota" />          
+          <field name="pekerjaan" />
+          <field name="tanggal_simpan" />
+          <field name="uang_setoran" /> -->
+          <field name="description"/>
         </tree>
       </field>
     </record>
@@ -28,17 +33,18 @@
           <div class="oe_title">
           <h1><field name="name"/></h1>
           </div>
-<group>
-<field name="responsible_id"/>
-</group>
-<notebook>
-<page string="Description">
-<field name="description"/>
-</page>
-</notebook>
-</sheet>
-</form>
-</field>
-</record>
+          <group>
+            <field name="parent_id" />
+          </group>
+
+          <notebook>
+            <page string="Description">
+              <field name="description"/>
+            </page>
+          </notebook>
+        </sheet>
+        </form>
+      </field>
+    </record>
   </data>
 </odoo>
