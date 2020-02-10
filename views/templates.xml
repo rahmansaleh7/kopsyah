@@ -1,0 +1,33 @@
+<odoo>
+    <data>
+
+        <record id="action_tabungan_amanah_list" model="ir.actions.act_window">
+            <field name="name">Daftar Tabungan Amanah</field>
+            <field name="res_model">kopsyah.amanah</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                Click to add a Tabungan Amanah
+                </p>
+                <p>klik tombol create untuk bikin Tabungan Amanah baru</p>
+            </field>
+            </record>
+        
+        <menuitem id="kopsyah_0"
+            name="Koperasi Syariah"
+            sequence="20"/>
+        <menuitem id="kopsyah_1"
+            name="Koperasi Syariah"
+            parent="kopsyah_0"
+            sequence="20"/>
+        <menuitem id="kopsyah_2"
+            name="Tabungan"
+            parent="kopsyah_0"
+            sequence="20"/>
+        <menuitem id="menu_tabungan_amanah"
+            name="Amanah"
+            parent="kopsyah_2"
+            action="action_tabungan_amanah_list"
+            sequence="20"/>
+    </data>
+</odoo>
